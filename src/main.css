@@ -1,114 +1,171 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;;
+    box-sizing: border-box;
 }
 
 body {
-    background-color: #F3F2F1;
+    background-color: #4d0026;
 }
 
-.master {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+.main {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
 
-    height: 825px;
-    width: 825px;
-
-    overflow: hidden;
-
-    background-color: #F3F2F1;
-
+.board {
+    display: grid;
+    grid-template-rows: repeat(15, 1fr);
+    grid-template-columns: repeat(15, 1fr);
+    justify-items: center;
+    align-items: center;
+    width: 921px;
+    height: 921px;
+    background-color: #555555;
     border-width: 10px;
-    border-style: ridge;
-    border-color: #336633;
-
-    padding: 0px;
+    border-radius: 10px;
+    border-style: groove;
+    border-color: #004d00;
+    font-size: 22px;
 }
 
-.master .flexbox {
-    display: flex;
-    justify-content: space-between;
-
-    width: 100%;
-    max-width: 825px;
-    height: 85px;
-
-    overflow: hidden;
-
-    background-color: #F3F2F1;
-
-    margin: 0 auto;
-    padding: 0px;
-}
-
-.master .flexbox .space {
+.square {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
     width: 55px;
-    max-height: 55px;
-
-    background-color: #319931;
+    height: 55px;
 
     border-width: 5px;
-    border-style: outset;
-    border-color: #336633;
+    border-style: inset;
 
     padding: 10px;
 }
 
-.master .flexbox .space .tile {
+.square[premium="none"] {
+    background-color: #2eb82e;
+    border-color: #2eb82e;
+}
+
+.square[premium="start"] {
+    background-color: #ffb84d;
+    border-color: #ffb84d;
+}
+
+.square[premium="double_letter"] {
+    background-color: #66ccff;
+    border-color: #66ccff;
+}
+
+.square[premium="double_word"] {
+    background-color: #ffc6b3;
+    border-color: #ffc6b3;
+}
+
+.square[premium="triple_letter"] {
+    background-color: #005ce6;
+    border-color: #005ce6;
+}
+
+.square[premium="triple_word"] {
+    background-color: #ff3300;
+    border-color: #ff3300;
+}
+
+
+.square .tile {
 
     background-color: #ffcc99;
 
     cursor: pointer;
 
-    width: 48px;
+    min-width: 48px;
     min-height: 48px;
-
     text-align: center;
-
+    vertical-align: middle;
 
     border-width: 4px;
     border-radius: 4px;
     border-style: solid;
     border-color:  #e59866 ;
+    font-size: 22px;
+}
+
+.bag {
+    display: grid;
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    justify-items: center;
+    align-items: center;
+    width: 825px;
+    height: 825px;
+    background-color: #bf8040;
+    border-width: 10px;
+    border-radius: 10px;
+    border-style: groove;
+    border-color:  #bf8040;
+    font-size: 22px;
+}
+
+.space {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+
+    border-width: 5px;
+    border-style: dashed;
+
+    padding: 10px;
+}
+
+.tile {
+
+    background-color: #ffcc99;
+
+    cursor: pointer;
+
+    min-width: 48px;
+    min-height: 48px;
+    text-align: center;
+    vertical-align: middle;
+
+    border-width: 4px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color:  #e59866 ;
+    font-size: 22px;
 }
 
 .rack {
-    display: flex;
-    flex-direction: row;
-
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+    justify-items: center;
+    align-items: center;
     width: 825px;
-    height: 120px;
-
-    background-color: #3498db;
-
-    border-width: 5px;
-    border-style: outset;
-    border-color: #2e86c1;
-
-    padding: 10px;
+    height: 100px;
+    background-color: #ac3939;
+    border-width: 10px;
+    border-radius: 10px;
+    border-style: groove;
+    border-color:  #ac3939;
+    font-size: 22px;
 }
 
-.rack .tile {
-
-    background-color: #ffcc99;
-
-    cursor: pointer;
-
-    width: 48px;
-    max-height: 48px;
-
-    text-align: center;
-
-
-    border-width: 4px;
-    border-radius: 4px;
-    border-style: solid;
-    border-color:  #e59866 ;
+.rack .space {
+    background-color: #990000;
+    border-width: 5px;
+    border-radius: 5px;
+    border-color:  #990000;
+    border-style: inset;
+    font-size: 22px;
 }

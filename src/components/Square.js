@@ -1,11 +1,21 @@
 import React from 'react'
+import Tile from './Tile'
 
-class Space extends React.Component{
+const premiumEnum = {
+    0 : "none",
+    1 : "start",
+    2 : "double_letter",
+    3 : "triple_letter",
+    4 : "double_word",
+    5 : "triple_word",
+}
+
+class Square extends React.Component{
 
     constructor (props) {
         super(props);
+        this.premium = premiumEnum[props.square_type];
         this.children = props.children;
-        this.container = props.container;
     }
 
     drop(e) {
@@ -24,7 +34,9 @@ class Space extends React.Component{
     render () {
         return (
             <div
-                className="space"
+                id={this.id}
+                className="square"
+                premium={this.premium}
                 onDrop={this.drop}
                 onDragOver={this.dragOver}
             >
@@ -36,5 +48,5 @@ class Space extends React.Component{
 }
 
 export {
-    Space
+    Square
 }
