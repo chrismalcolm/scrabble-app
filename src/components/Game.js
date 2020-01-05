@@ -2,6 +2,7 @@ import React from 'react'
 import { Tile } from './Tile'
 import { Square } from './Square'
 import { Space } from './Space'
+import { Rack } from './Rack'
 import _ from 'lodash';
 
 export default class Game extends React.Component {
@@ -36,9 +37,7 @@ export default class Game extends React.Component {
                         <div className="bag">
                             { this.tileArray.map( (letter, id) => <Space><Tile letter={letter} tile_id={id} /></Space> )}
                         </div>
-                        <div className="rack">
-                            { [1,2,3,4,5,6,7].map( (letter, id) => <Space></Space> )}
-                        </div>
+                        <Rack/>
                     </div>
                 </div>
             </React.Fragment>

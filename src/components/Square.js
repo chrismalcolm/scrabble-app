@@ -19,6 +19,8 @@ class Square extends React.Component{
     }
 
     drop(e) {
+        if (e.target.children.length) return;
+
         e.preventDefault();
 
         const tile_id = e.dataTransfer.getData('tile_id');
