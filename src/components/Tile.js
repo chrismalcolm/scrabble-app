@@ -19,6 +19,7 @@ class Tile extends React.Component{
     dragStart(e) {
         const target = e.target;
         e.dataTransfer.setData('tile_id', target.id);
+        //e.dataTransfer.setData('letter', target.getAttribute('letter'));
     }
 
     dragOver(e) {

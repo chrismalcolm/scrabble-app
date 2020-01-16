@@ -18,12 +18,6 @@ class Space extends React.Component{
         const tile = document.getElementById(tile_id);
 
         e.target.appendChild(tile);
-
-        //const container = document.getElementById(e.target.container);
-        const container = document.getElementById("rack");
-        console.log(container)
-        console.log(e.target)
-        container.updateSlotArray("a", 3);
     }
 
     dragOver(e) {
@@ -33,7 +27,10 @@ class Space extends React.Component{
     render () {
         return (
             <div
+                id={this.id}
                 className="space"
+                container={this.container}
+                slot={this.slot}
                 onDrop={this.drop}
                 onDragOver={this.dragOver}
             >
