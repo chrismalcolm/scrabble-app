@@ -8,6 +8,10 @@ import './main.css';
 // Fix display of tiles
 
 ReactDOM.render(
-  <Game />,
+    <React.Fragment>
+
+    <Game/>
+
+    </React.Fragment>,
   document.getElementById('root')
 );

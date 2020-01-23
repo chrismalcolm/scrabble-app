@@ -14,6 +14,8 @@ class Square extends React.Component{
 
     constructor (props) {
         super(props);
+        this.id = props.id;
+        this.container = props.container;
         this.premium = premiumEnum[props.square_type];
         this.children = props.children;
     }
@@ -38,6 +40,7 @@ class Square extends React.Component{
             <div
                 id={this.id}
                 className="square"
+                container={this.container}
                 premium={this.premium}
                 onDrop={this.drop}
                 onDragOver={this.dragOver}

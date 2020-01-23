@@ -3,6 +3,8 @@ import { Tile } from './Tile'
 import { Square } from './Square'
 import { Space } from './Space'
 import { Rack } from './Rack'
+import { Board } from './Board'
+import { SolveButton, SolveSolution } from './Solve'
 import _ from 'lodash';
 
 export default class Game extends React.Component {
@@ -30,13 +32,22 @@ export default class Game extends React.Component {
         return (
             <React.Fragment>
                 <div className="main">
-                    <div className="board">
-                        { this.boardArray.map( (type, id) => <Square square_type={type} key={id} /> )}
-                    </div>
+                <div>
+                <ul>
+                    <li><a href="default.asp">Home</a></li>
+                    <li><a href="news.asp">News</a></li>
+                    <li><a href="contact.asp">Contact</a></li>
+                    <li><a href="about.asp">About</a></li>
+                </ul>
+                </div>
                     <div>
                         <div className="bag">
                             { this.tileArray.map( (letter, id) => <Space><Tile letter={letter} tile_id={id} /></Space> )}
                         </div>
+                        <SolveButton/>
+                    </div>
+                    <div>
+                        <Board/>
                         <Rack/>
                     </div>
                 </div>
