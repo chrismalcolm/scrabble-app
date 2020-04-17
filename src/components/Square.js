@@ -10,6 +10,15 @@ const premiumEnum = {
     5 : "triple_word",
 }
 
+const premiumLabelUI = {
+    0 : "Normal",
+    1 : "Start",
+    2 : "Double Letter",
+    3 : "Triple Letter",
+    4 : "Double Word",
+    5 : "Triple Word",
+}
+
 class Square extends React.Component{
 
     constructor (props) {
@@ -53,5 +62,5 @@ class Square extends React.Component{
 }
 
 export {
-    Square
+    Square, premiumLabelUI
 }

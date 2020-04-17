@@ -35,9 +35,14 @@ class SolveButton extends React.Component{
 
     render () {
         return (
-            <button onClick={this.solve} className="solvebutton">
+            <form action="http://localhost:8000" target="_top" method="GET">
+            <button
+                type="submit"
+                onClick={this.solve}
+                className="solvebutton">
                 <p><b>Solve</b></p>
             </button>
+            </form>
         )
     }
 

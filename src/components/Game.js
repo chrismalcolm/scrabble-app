@@ -4,6 +4,8 @@ import { Square } from './Square'
 import { Space } from './Space'
 import { Rack } from './Rack'
 import { Board } from './Board'
+import { Key } from './Key'
+import { Bag } from './Bag'
 import { SolveButton, SolveSolution } from './Solve'
 import _ from 'lodash';
 
@@ -32,23 +34,26 @@ export default class Game extends React.Component {
         return (
             <React.Fragment>
                 <div className="main">
-                <div>
-                <ul>
-                    <li><a href="default.asp">Home</a></li>
-                    <li><a href="news.asp">News</a></li>
-                    <li><a href="contact.asp">Contact</a></li>
-                    <li><a href="about.asp">About</a></li>
-                </ul>
-                </div>
                     <div>
-                        <div className="bag">
-                            { this.tileArray.map( (letter, id) => <Space><Tile letter={letter} tile_id={id} /></Space> )}
-                        </div>
+                        <br/>
+                        <Board/>
+                        <br/>
+                        <Rack/>
+                    </div>
+
+                    <div>
+                        <br/>
+                        <Key/>
+                        <br/>
+                        <textarea id="ciphertext" name="ciphertext" rows="10" cols="30"></textarea>
+                        <br/>
+                        <br/>
                         <SolveButton/>
                     </div>
+
                     <div>
-                        <Board/>
-                        <Rack/>
+                        <Bag/>
+
                     </div>
                 </div>
             </React.Fragment>
