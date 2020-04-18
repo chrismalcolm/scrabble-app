@@ -1,4 +1,6 @@
 import React from 'react'
+import { updateSolver } from './Solve.js'
+
 
 class Space extends React.Component{
 
@@ -17,10 +19,9 @@ class Space extends React.Component{
         const tile_id = e.dataTransfer.getData('tile_id');
         const tile = document.getElementById(tile_id);
 
-        //const space = document.getElementById(e.target.id);
-        //console.log(space);
-
         e.target.appendChild(tile);
+
+        updateSolver();
     }
 
     dragOver(e) {

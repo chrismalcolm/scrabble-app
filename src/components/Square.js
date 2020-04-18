@@ -1,5 +1,6 @@
 import React from 'react'
 import Tile from './Tile'
+import { updateSolver } from './Solve.js'
 
 const premiumEnum = {
     0 : "none",
@@ -38,6 +39,8 @@ class Square extends React.Component{
         const tile = document.getElementById(tile_id);
 
         e.target.appendChild(tile);
+
+        updateSolver();
     }
 
     dragOver(e) {
