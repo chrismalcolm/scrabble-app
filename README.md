@@ -1,3 +1,11 @@
+# Scrabble App
+A web application to use the Python wordsolver to find the highest scoring move in a game of scrabble.
+
+TODO
+
+* Need to revisit this project
+* Need to update this README.md
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
